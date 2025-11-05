@@ -6,13 +6,11 @@ import java.util.logging.Logger;
 
 public class DiscountService {
     private static final Logger logger = Logger.getLogger(ShoppingCart.class.getName());
-    private final List<CartItem> items;
     private final List<Discount> availableDiscounts;
-    private PaymentResult lastPaymentResult;
     private String appliedDiscountCode;
 
     public DiscountService() {
-        this.items = new ArrayList<>();
+        // this.items = new ArrayList<>();
         this.availableDiscounts = new ArrayList<>();
         initializeDiscounts();
     }
@@ -23,7 +21,7 @@ public class DiscountService {
         availableDiscounts.add(new Discount("VIP30", 30.0));
     }
 
-    public double calculateDiscountAmount(List<CartItem> items) {
+    public double calculateDiscountAmount(List<CartItem> items, Double subTotaal) {
         if (appliedDiscountCode == null) {
             return 0.0;
         }
@@ -31,7 +29,7 @@ public class DiscountService {
                 .filter(d -> d.getCode().equals(appliedDiscountCode)).findFirst().orElse(null);
 
         if (discount != null) {
-            double subtotal = calculateSubtotal(items);
+            double subtotal = subTotaal;
             return subtotal * (discount.getPercentage() / 100.0);
         }
         return 0.0;
@@ -50,9 +48,9 @@ public class DiscountService {
         return false;
     }
 
-    public double calculateSubtotal(List<CartItem> items) {
-        return items.stream().mapToDouble(item -> item.getPrice() * item.getQuantity()).sum();
-    }
+    // public double calculateSubtotal(List<CartItem> items) {
+    //     return items.stream().mapToDouble(item -> item.getPrice() * item.getQuantity()).sum();
+    // }
 
     public String getAppliedDiscountCode() {
         return appliedDiscountCode;

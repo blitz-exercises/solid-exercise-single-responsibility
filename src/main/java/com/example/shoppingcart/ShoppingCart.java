@@ -2,7 +2,7 @@ package com.example.shoppingcart;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
+// import java.util.UUID;
 import java.util.logging.Logger;
 
 public class ShoppingCart implements ShoppingCartService {
@@ -12,10 +12,11 @@ public class ShoppingCart implements ShoppingCartService {
     // private final List<Discount> availableDiscounts;
     private String appliedDiscountCode;
     private String orderId;
-    private String emailSentTo;
-    private PaymentResult lastPaymentResult;
+    // private String emailSentTo;
+    // private PaymentResult lastPaymentResult;
     private PaymentProcessor paymentProcessor = new PaymentProcessor();
     private DiscountService discountService = new DiscountService();
+    private EmailHandler emailHandler = new EmailHandler();
 
     public ShoppingCart() {
         this.items = new ArrayList<>();
@@ -35,8 +36,8 @@ public class ShoppingCart implements ShoppingCartService {
     }
 
     public double calculateSubtotal() {
-        return discountService.calculateSubtotal(items);
-        // return items.stream().mapToDouble(item -> item.getPrice() * item.getQuantity()).sum();
+        // return discountService.calculateSubtotal(items);
+        return items.stream().mapToDouble(item -> item.getPrice() * item.getQuantity()).sum();
     }
 
     public boolean applyDiscount(String discountCode) {
@@ -65,7 +66,7 @@ public class ShoppingCart implements ShoppingCartService {
         //     return subtotal * (discount.getPercentage() / 100.0);
         // }
         // return 0.0;
-        return discountService.calculateDiscountAmount(items);
+        return discountService.calculateDiscountAmount(items, calculateSubtotal());
     }
 
     public double calculateTotal() {
@@ -98,52 +99,54 @@ public class ShoppingCart implements ShoppingCartService {
     }
 
     public String generateOrderId() {
-        orderId = "ORD-" + UUID.randomUUID().toString().substring(0, 8).toUpperCase();
-        logger.info("Generated order ID: " + orderId);
-        return orderId;
+        // orderId = "ORD-" + UUID.randomUUID().toString().substring(0, 8).toUpperCase();
+        // logger.info("Generated order ID: " + orderId);
+        // return orderId;
+        return paymentProcessor.generateOrderId();
     }
 
     public void sendOrderConfirmationEmail(String customerEmail) {
-        String subject = "Order Confirmation - " + orderId;
-        String body = buildEmailBody();
+        // String subject = "Order Confirmation - " + orderId;
+        // String body = buildEmailBody();
 
-        logger.info("Sending email to: " + customerEmail);
-        logger.info("Subject: " + subject);
-        logger.info("Body: " + body);
+        // logger.info("Sending email to: " + customerEmail);
+        // logger.info("Subject: " + subject);
+        // logger.info("Body: " + body);
         
-        // Simulate email sending
-        try {
-            Thread.sleep(50);
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-        }
+        // // Simulate email sending
+        // try {
+        //     Thread.sleep(50);
+        // } catch (InterruptedException e) {
+        //     Thread.currentThread().interrupt();
+        // }
         
-        emailSentTo = customerEmail;
-        logger.info("Email sent successfully to: " + customerEmail);
+        // emailSentTo = customerEmail;
+        // logger.info("Email sent successfully to: " + customerEmail);
+        emailHandler.sendOrderConfirmationEmail(customerEmail, orderId, items, appliedDiscountCode);
     }
 
-    private String buildEmailBody() {
-        StringBuilder body = new StringBuilder();
-        body.append("Thank you for your order!\n\n");
-        body.append("Order ID: ").append(orderId).append("\n\n");
-        body.append("Items:\n");
-        for (CartItem item : items) {
-            body.append("- ").append(item.getProductName()).append(" x").append(item.getQuantity())
-                    .append(" - $").append(item.getPrice()).append("\n");
-        }
-        body.append("\nSubtotal: $").append(String.format("%.2f", calculateSubtotal()));
-        if (appliedDiscountCode != null) {
-            body.append("\nDiscount (").append(appliedDiscountCode).append("): -$")
-                    .append(String.format("%.2f", calculateDiscountAmount()));
-        }
-        body.append("\nTotal: $").append(String.format("%.2f", calculateTotal()));
+    // private String buildEmailBody() {
+        // StringBuilder body = new StringBuilder();
+        // body.append("Thank you for your order!\n\n");
+        // body.append("Order ID: ").append(orderId).append("\n\n");
+        // body.append("Items:\n");
+        // for (CartItem item : items) {
+        //     body.append("- ").append(item.getProductName()).append(" x").append(item.getQuantity())
+        //             .append(" - $").append(item.getPrice()).append("\n");
+        // }
+        // body.append("\nSubtotal: $").append(String.format("%.2f", calculateSubtotal()));
+        // if (appliedDiscountCode != null) {
+        //     body.append("\nDiscount (").append(appliedDiscountCode).append("): -$")
+        //             .append(String.format("%.2f", calculateDiscountAmount()));
+        // }
+        // body.append("\nTotal: $").append(String.format("%.2f", calculateTotal()));
 
-        if (lastPaymentResult != null && lastPaymentResult.isSuccess()) {
-            body.append("\n\nTransaction ID: ").append(lastPaymentResult.getTransactionId());
-        }
+        // if (lastPaymentResult != null && lastPaymentResult.isSuccess()) {
+        //     body.append("\n\nTransaction ID: ").append(lastPaymentResult.getTransactionId());
+        // }
 
-        return body.toString();
-    }
+        // return body.toString();
+    // }
 
     public void checkout(String customerEmail, String paymentMethod) {
         // Generate order ID
@@ -172,11 +175,11 @@ public class ShoppingCart implements ShoppingCartService {
     }
 
     public String getOrderId() {
-        return orderId;
+        return paymentProcessor.getOrderId();
     }
 
     public String getEmailSentTo() {
-        return emailSentTo;
+        return emailHandler.getEmailSentTo();
     }
 
     public PaymentResult getLastPaymentResult() {
