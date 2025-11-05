@@ -4,7 +4,7 @@ import java.util.UUID;
 import java.util.logging.Logger;
 
 public class PaymentProcessor {
-    private static final Logger logger = Logger.getLogger(ShoppingCart.class.getName());
+    private static final Logger logger = Logger.getLogger(PaymentProcessor.class.getName());
     private PaymentResult lastPaymentResult;
     private String orderId;
 

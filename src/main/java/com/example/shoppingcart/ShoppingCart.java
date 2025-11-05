@@ -122,7 +122,7 @@ public class ShoppingCart implements ShoppingCartService {
         
         // emailSentTo = customerEmail;
         // logger.info("Email sent successfully to: " + customerEmail);
-        emailHandler.sendOrderConfirmationEmail(customerEmail, orderId, items, appliedDiscountCode);
+        emailHandler.sendOrderConfirmationEmail(customerEmail, orderId, items, appliedDiscountCode, calculateTotal(), calculateSubtotal());
     }
 
     // private String buildEmailBody() {

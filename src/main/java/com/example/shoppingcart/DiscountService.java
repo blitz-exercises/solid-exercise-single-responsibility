@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 public class DiscountService {
-    private static final Logger logger = Logger.getLogger(ShoppingCart.class.getName());
+    private static final Logger logger = Logger.getLogger(DiscountService.class.getName());
     private final List<Discount> availableDiscounts;
     private String appliedDiscountCode;
 
