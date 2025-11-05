@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.userregistration.UserRegistrationIntegrationTest" time="0.193" tests="3" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/rensbressers/FunProjects/blitz/blitz-exercise-repos/oop-exercises/solid-exercise-single-responsibility/target/test-classes:/Users/rensbressers/FunProjects/blitz/blitz-exercise-repos/oop-exercises/solid-exercise-single-responsibility/target/classes:/Users/rensbressers/.m2/repository/org/junit/jupiter/junit-jupiter/5.9.2/junit-jupiter-5.9.2.jar:/Users/rensbressers/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.2/junit-jupiter-api-5.9.2.jar:/Users/rensbressers/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/rensbressers/.m2/repository/org/junit/platform/junit-platform-commons/1.9.2/junit-platform-commons-1.9.2.jar:/Users/rensbressers/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/rensbressers/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.9.2/junit-jupiter-params-5.9.2.jar:/Users/rensbressers/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.2/junit-jupiter-engine-5.9.2.jar:/Users/rensbressers/.m2/repository/org/junit/platform/junit-platform-engine/1.9.2/junit-platform-engine-1.9.2.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/Amsterdam"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="001"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/rensbressers/FunProjects/blitz/blitz-exercise-repos/oop-exercises/solid-exercise-single-responsibility/target/surefire/surefirebooter-20251104134429050_3.jar /Users/rensbressers/FunProjects/blitz/blitz-exercise-repos/oop-exercises/solid-exercise-single-responsibility/target/surefire 2025-11-04T13-44-28_997-jvmRun1 surefire-20251104134429050_1tmp surefire_0-20251104134429050_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="test" value="UserRegistrationIntegrationTest"/>
+    <property name="surefire.test.class.path" value="/Users/rensbressers/FunProjects/blitz/blitz-exercise-repos/oop-exercises/solid-exercise-single-responsibility/target/test-classes:/Users/rensbressers/FunProjects/blitz/blitz-exercise-repos/oop-exercises/solid-exercise-single-responsibility/target/classes:/Users/rensbressers/.m2/repository/org/junit/jupiter/junit-jupiter/5.9.2/junit-jupiter-5.9.2.jar:/Users/rensbressers/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.2/junit-jupiter-api-5.9.2.jar:/Users/rensbressers/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/rensbressers/.m2/repository/org/junit/platform/junit-platform-commons/1.9.2/junit-platform-commons-1.9.2.jar:/Users/rensbressers/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/rensbressers/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.9.2/junit-jupiter-params-5.9.2.jar:/Users/rensbressers/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.2/junit-jupiter-engine-5.9.2.jar:/Users/rensbressers/.m2/repository/org/junit/platform/junit-platform-engine/1.9.2/junit-platform-engine-1.9.2.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/rensbressers"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-01-16"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/rensbressers/FunProjects/blitz/blitz-exercise-repos/oop-exercises/solid-exercise-single-responsibility"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/rensbressers/FunProjects/blitz/blitz-exercise-repos/oop-exercises/solid-exercise-single-responsibility/target/surefire/surefirebooter-20251104134429050_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="21.0.2+13-LTS-58"/>
+    <property name="user.name" value="rensbressers"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="14.6.1"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="/Users/rensbressers/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/d7/zjvdq9557v782149xk6npp400000gn/T/"/>
+    <property name="java.version" value="21.0.2"/>
+    <property name="user.dir" value="/Users/rensbressers/FunProjects/blitz/blitz-exercise-repos/oop-exercises/solid-exercise-single-responsibility"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/rensbressers/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="21.0.2+13-LTS-58"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="testPasswordHashing" classname="com.example.userregistration.UserRegistrationIntegrationTest" time="0.021"/>
+  <testcase name="testCompleteRegistrationFlow" classname="com.example.userregistration.UserRegistrationIntegrationTest" time="0.159">
+    <system-err><![CDATA[Nov 04, 2025 1:44:29 PM com.example.userregistration.UserRegistration logEvent
+INFO: [2025-11-04T13:44:29.354594] Registration attempt for email: user@example.com
+Nov 04, 2025 1:44:29 PM com.example.userregistration.UserRegistration initializeUserProfile
+INFO: Initialized default profile for user: user@example.com
+Nov 04, 2025 1:44:29 PM com.example.userregistration.UserRegistration generateVerificationToken
+INFO: Generated verification token for: user@example.com
+Nov 04, 2025 1:44:29 PM com.example.userregistration.UserRegistration sendVerificationEmail
+INFO: Sending verification email to: user@example.com
+Nov 04, 2025 1:44:29 PM com.example.userregistration.UserRegistration sendVerificationEmail
+INFO: Subject: Verify Your Account
+Nov 04, 2025 1:44:29 PM com.example.userregistration.UserRegistration sendVerificationEmail
+INFO: Body: Hello,
+
+Thank you for registering with us!
+
+Please verify your email address by clicking the link below:
+https://example.com/verify?token=VERIFY-76A4FEC4-E1BC-4F&email=user@example.com
+
+Or use this verification code: VERIFY-76A4FEC4-E1BC-4F
+
+This link will expire in 24 hours.
+
+If you did not create an account, please ignore this email.
+
+Best regards,
+The Team
+Nov 04, 2025 1:44:29 PM com.example.userregistration.UserRegistration sendVerificationEmail
+INFO: Verification email sent successfully to: user@example.com
+Nov 04, 2025 1:44:29 PM com.example.userregistration.UserRegistration logEvent
+INFO: [2025-11-04T13:44:29.446341] User registered successfully: user@example.com
+Nov 04, 2025 1:44:29 PM com.example.userregistration.UserRegistration logEvent
+INFO: [2025-11-04T13:44:29.448069] Account activation attempt for: user@example.com
+Nov 04, 2025 1:44:29 PM com.example.userregistration.UserRegistration sendWelcomeEmail
+INFO: Sending welcome email to: user@example.com
+Nov 04, 2025 1:44:29 PM com.example.userregistration.UserRegistration sendWelcomeEmail
+INFO: Subject: Welcome to Our Platform!
+Nov 04, 2025 1:44:29 PM com.example.userregistration.UserRegistration sendWelcomeEmail
+INFO: Body: Welcome user@example.com!
+
+Your account has been successfully activated.
+
+Your account details:
+- Email: user@example.com
+- Registration Date: 2025-11-04T13:44:29.369548
+- Language: en
+- Timezone: UTC
+- Email Notifications: Enabled
+
+Thank you for joining us!
+
+Best regards,
+The Team
+Nov 04, 2025 1:44:29 PM com.example.userregistration.UserRegistration sendWelcomeEmail
+INFO: Welcome email sent successfully to: user@example.com
+Nov 04, 2025 1:44:29 PM com.example.userregistration.UserRegistration logEvent
+INFO: [2025-11-04T13:44:29.502676] Account activated successfully: user@example.com
+Nov 04, 2025 1:44:29 PM com.example.userregistration.UserRegistration logEvent
+INFO: [2025-11-04T13:44:29.502935] Account activation attempt for: user@example.com
+Nov 04, 2025 1:44:29 PM com.example.userregistration.UserRegistration logEvent
+INFO: [2025-11-04T13:44:29.503166] Account activation failed: Invalid or expired token
+Nov 04, 2025 1:44:29 PM com.example.userregistration.UserRegistration logEvent
+INFO: [2025-11-04T13:44:29.503433] Registration attempt for email: user@example.com
+Nov 04, 2025 1:44:29 PM com.example.userregistration.UserRegistration logEvent
+INFO: [2025-11-04T13:44:29.503681] Registration failed: Email already exists
+]]></system-err>
+  </testcase>
+  <testcase name="testInvalidRegistrationAttempts" classname="com.example.userregistration.UserRegistrationIntegrationTest" time="0.002">
+    <system-err><![CDATA[Nov 04, 2025 1:44:29 PM com.example.userregistration.UserRegistration logEvent
+INFO: [2025-11-04T13:44:29.506105] Registration attempt for email: invalid-email
+Nov 04, 2025 1:44:29 PM com.example.userregistration.UserRegistration logEvent
+INFO: [2025-11-04T13:44:29.506370] Registration failed: Invalid email format
+Nov 04, 2025 1:44:29 PM com.example.userregistration.UserRegistration logEvent
+INFO: [2025-11-04T13:44:29.506576] Registration attempt for email: user@example.com
+Nov 04, 2025 1:44:29 PM com.example.userregistration.UserRegistration logEvent
+INFO: [2025-11-04T13:44:29.506801] Registration failed: Password does not meet requirements
+]]></system-err>
+  </testcase>
+</testsuite>
