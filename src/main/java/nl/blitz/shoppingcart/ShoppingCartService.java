@@ -1,4 +1,4 @@
-package com.example.shoppingcart;
+package nl.blitz.shoppingcart;
 
 import java.util.List;
 

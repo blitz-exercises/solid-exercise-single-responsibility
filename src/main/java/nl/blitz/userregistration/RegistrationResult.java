@@ -1,4 +1,4 @@
-package com.example.userregistration;
+package nl.blitz.userregistration;
 
 public class RegistrationResult {
     private final boolean success;

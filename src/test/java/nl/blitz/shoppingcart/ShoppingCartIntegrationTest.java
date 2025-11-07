@@ -1,4 +1,4 @@
-package com.example.shoppingcart;
+package nl.blitz.shoppingcart;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package com.example.shoppingcart;
+package nl.blitz.shoppingcart;
 
 public class PaymentResult {
     private final boolean success;

@@ -1,4 +1,4 @@
-package com.example.shoppingcart;
+package nl.blitz.shoppingcart;
 
 public class Discount {
     private final String code;

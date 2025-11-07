@@ -1,4 +1,4 @@
-package com.example.userregistration;
+package nl.blitz.userregistration;
 
 import java.util.List;
 

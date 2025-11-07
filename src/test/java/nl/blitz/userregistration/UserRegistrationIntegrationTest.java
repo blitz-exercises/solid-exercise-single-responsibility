@@ -1,4 +1,4 @@
-package com.example.userregistration;
+package nl.blitz.userregistration;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

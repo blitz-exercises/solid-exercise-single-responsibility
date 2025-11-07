@@ -1,4 +1,4 @@
-package com.example.shoppingcart;
+package nl.blitz.shoppingcart;
 
 public class CartItem {
     private final String productName;
